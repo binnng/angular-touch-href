@@ -11,7 +11,8 @@
 
   WIN = window
   IsTouch = "ontouchend" of WIN
-
+  
+  # 如果不是移动设备，什么都不做
   return no if not IsTouch 
 
   LOC = location
@@ -35,13 +36,14 @@
 
 
   # 去除自带的ngHref
+  # 不要去除，作为其扩展
   # ngTouchHref.config ($provide) ->
   #   $provide.decorator "ngHrefDirective", ($delegate) ->
 
   #     $delegate.shift()
   #     $delegate
 
-  ngTouchHref.directive "ngHref", ($swipe) ->
+  ngTouchHref.directive "ngHref", ->
 
 
     link: (scope, element, attrs) ->
