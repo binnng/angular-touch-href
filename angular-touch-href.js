@@ -27,7 +27,7 @@
       y: e.clientY
     };
   };
-  return ngTouchHref.directive("ngHref", function($swipe) {
+  return ngTouchHref.directive("ngHref", function() {
     return {
       link: function(scope, element, attrs) {
         var active, lastPos, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, startCoords, totalX, totalY, _ref;
