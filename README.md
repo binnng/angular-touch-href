@@ -8,7 +8,7 @@ angular应用中，移动设备上，页面跳转采用touch事件触发，响�
 使用：
 
 ```javascript
-App = angular.module "myAngularApp", [
+App = angular.module("myAngularApp", [
   "ngTouchHref"
-]
+])
 ```
